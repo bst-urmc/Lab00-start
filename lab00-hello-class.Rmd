@@ -2,24 +2,9 @@
 title: "Lab 00 - Hello Class!"
 date: " `r Sys.Date()`"
 author: "Tanzy Love"
-output: 
-  tufte::tufte_html:
-    tufte_variant: "envisioned"
-    highlight: pygments
-    css: lab.css
-    link-citations: yes
-    self_contained: FALSE
-  html_document:
-    self_contained: FALSE
----
 
-```{r include=FALSE}
-library(tufte)
-options(
-  htmltools.dir.version = FALSE, # for blogdown
-  show.signif.stars = FALSE     # for regression output
-  )
-```
+output: md_document
+---
 
 
 # Introduction
@@ -75,7 +60,11 @@ This part you will do every time you have an assignment or lab.
 
 Either:
 
--  Open RStudio and pick {\tt New Project -> }
+- On GitHub, click on the clipboard icon to copy the repo URL. It will start with the class "bst-urmc" and end with your username "tanzylove" (for me) and the middle is based on what the assignment is named.
+
+-  Open RStudio and pick {\tt New Project -> Version Control -> GIT}. Paste in the repo URL from github
+
+Or: 
 
 - On GitHub, click on the green **Clone or download** button, select **Use HTTPS** (this might already be selected by default, and if it is, you'll see the text **Clone with HTTPS** as in the image below). Click on the clipboard icon to copy the repo URL. It will start with the class "bst-urmc" and end with your username "tanzylove" (for me) and the middle is based on what the assignment is named.
 
@@ -85,11 +74,10 @@ Either:
 
 #you need to change this to the right repository and location for you and your local machine
 usethis::create_from_github("https://github.com/bst-urmc/setup-check-assignment-0-tanzylove",
-   destdir="~/Documents/work/teaching/BST430/")
+   destdir="~/Documents/teaching/bst430/")
 
 ```
 
-- Copy and paste the URL of your assignment repo into the function
 - If you need to login to github, a login box should pop up.
 - It opens up a new copy of RStudio with all the files from the repository in question.
 
